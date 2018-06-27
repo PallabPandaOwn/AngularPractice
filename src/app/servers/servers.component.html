@@ -1,6 +1,15 @@
 
-  <h1>Servers Main Form</h1>
-  <button class="btn btn-primary" [disabled]='!isEnable'>Add Server</button>
-  <p>.............</p>
+  <h1>Servers Component ...</h1>
+  <br/>
+  <label>Enter Server Name </label>
+
+  <input type="text" class="form-control" (input)="onServerUpdateName($event)">
+
+  <label>{{serverName}}</label>
+  <br/><br/>
+  <button class="btn btn-primary" [disabled]='!isEnable'(click)="onServerCreation()">Add Server</button>
+  <br/><br/>
+  <P>{{serverCreationStatus}}</P>
+  <br/>
   <app-server></app-server>
 
